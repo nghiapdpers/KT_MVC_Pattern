@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             override fun onResponse(call: Call<UserRespone>, response: Response<UserRespone>) {
                 data.addAll(response.body()!!.results)
                 myAdapter.notifyDataSetChanged()
-                Log.e("Successful API", "onResponse: $data" )
+                Log.e("Success API", "onResponse: $data" )
             }
 
             override fun onFailure(call: Call<UserRespone>, t: Throwable) {
